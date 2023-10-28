@@ -7,7 +7,7 @@ import Create from './Create'
 function App() {
  const { fetchItems } = useContext(ItemsContext)
  
-  useEffect(() => {fetchItems()}, [fetchItems])
+  useEffect(() => {fetchItems()}, [])
   
   return (
     <>
