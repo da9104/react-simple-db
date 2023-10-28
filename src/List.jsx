@@ -1,9 +1,8 @@
-import { useState, useContext, createContext, useReducer, useEffect } from 'react'
-import ItemsContext from './Context'
 import Item from './Item'
+import useItemsContext from './hooks'
 
 export default function List() {
-  const { items } = useContext(ItemsContext) 
+  const { items } = useItemsContext()
   const renderedItems = items.map((item) => {
         return (
             <Item key={item.id} item={item} />

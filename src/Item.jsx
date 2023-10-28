@@ -1,10 +1,10 @@
-import { useState, useContext } from "react"
-import ItemsContext from './Context'
+import { useState } from "react"
 import Edit from './Edit'
+import useItemsContext from './hooks'
 
 export default function Item({ item }) {
     const [showEdit, setShowEdit] = useState(false)
-    const { deleteItemById, } = useContext(ItemsContext)
+    const { deleteItemById } = useItemsContext()
 
     const handleDeleteClick = () => {
         deleteItemById(item.id)

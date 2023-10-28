@@ -1,9 +1,9 @@
-import { useState, useContext } from 'react'
-import ItemsContext, { Provider } from './Context'
+import { useState } from 'react'
+import useItemsContext from './hooks'
 
 export default function Create() {
     const [title, setTitle] = useState('')
-    const { createItem } = useContext(ItemsContext)
+    const { createItem } = useItemsContext()
 
     const handleChange = (e) => {
         setTitle(e.target.value)

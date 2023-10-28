@@ -1,9 +1,9 @@
-import { useState, useContext } from "react"
-import ItemsContext from './Context'
+import { useState } from "react"
+import useItemsContext from './hooks'
 
 export default function Create({item, onSubmit}) {
     const [title, setTitle] = useState(item.title)
-    const { editItemById } = useContext(ItemsContext)
+    const { editItemById } = useItemsContext()
 
     const handleChange = (e) => {
         setTitle(e.target.value)
